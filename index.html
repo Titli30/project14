@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Create Your Professional Resume</h1>
+    <p>Build a job-winning resume in minutes with live preview and customizable templates.</p>
+    <button id="startBtn">Start Building</button>
+    <div class="switchers">
+      <a href="#">Template Switcher</a> | <a href="#">Theme Switcher</a>
+    </div>
+  </section>
+
+  <!-- Resume Builder Form and Preview -->
+  <section id="builder" class="hidden">
+    <div class="form-container">
+      <form id="cvForm">
+        <h2>Basic Info</h2>
+        <input type="text" placeholder="Full Name" id="name">
+        <input type="text" placeholder="Title (e.g. Software Engineer)" id="title">
+        <input type="file" id="photoInput">
+        <input type="text" placeholder="Guardian Name" id="guardian">
+        <input type="email" placeholder="Email" id="email">
+        <input type="text" placeholder="Phone" id="phone">
+        <input type="text" placeholder="Address" id="address">
+        <input type="url" placeholder="GitHub Link" id="github">
+        <textarea placeholder="Profile Summary" id="profile"></textarea>
+        <textarea placeholder="Hobbies (comma separated)" id="hobbies"></textarea>
+
+        <h2>Skills</h2>
+        <textarea id="skills" placeholder="Comma-separated skills"></textarea>
+
+        <h2>Languages</h2>
+        <textarea id="languages" placeholder="Comma-separated languages with proficiency"></textarea>
+
+        <h2>Education</h2>
+        <div id="educationContainer"></div>
+        <button type="button" onclick="addEducation()">Add Education</button>
+
+        <h2>Projects (Optional)</h2>
+        <div id="projectContainer"></div>
+        <button type="button" onclick="addProject()">Add Project</button>
+
+        <h2>Companies (Optional)</h2>
+        <div id="companyContainer"></div>
+        <button type="button" onclick="addCompany()">Add Company</button>
+
+        <button type="button" onclick="generateCV()">Preview Resume</button>
+        <button type="button" onclick="downloadPDF()">Download PDF</button>
+      </form>
+    </div>
+
+    <!-- Live Preview -->
+    <div id="resumePreview">
+      <!-- Dynamically generated CV will appear here -->
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Your Name | Built with 🧠 HTML, CSS & JS | <a href="#">GitHub</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
